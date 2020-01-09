@@ -5,7 +5,7 @@
 
 Dieses Django Projekt steckt hinter der Website auf DACHOR-Darmstadt.de und bildet den Webauftritt des DA!CHOR in Darmstadt.
 
-Das Repository enthält ein Django Prpjekt mit einer einzelnen App, die die Website und den internen Bereich bereitstellt.
+Das Repository enthält ein Django Projekt mit einer einzelnen App, die die Website und den internen Bereich bereitstellt.
 
 
 ## Setup
