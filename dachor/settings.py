@@ -126,5 +126,5 @@ BOOTSTRAP4 = {
         'url': STATIC_URL + "vendor/bootstrap/js/bootstrap.min.js",
     },
     # use local theme
-    'theme_url': 'vendor/bootswatch-superhero/bootstrap.min.css',
+    'theme_url': STATIC_URL + 'vendor/bootswatch-superhero/bootstrap.min.css',
 }
