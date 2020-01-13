@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+
+{# make static files accessible #}
+{% load static %}
+
+
+{# load bootstrap tag library #}
+{% load bootstrap4 %}
+
+{# load Bootstrap CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='no' %}
+
+<head>
+
+    <meta charset="utf-8">
+    {% comment %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Website des DA!CHOR in Darmstadt">
+    <meta name="author" content="N. Geisler">
+    {% endcomment %}
+
+    {% block title %}<title>DA!CHOR</title>{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+{% block navbar %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">DA!CHOR</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Start<span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Impressum</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% endblock %}
+
+<!-- Page Content -->
+{% block content %}
+    <div class="container">
+        <h1>Willkommen beim DA!CHOR</h1>
+    </div>
+{% endblock %}
+
+</body>
+
+</html>
