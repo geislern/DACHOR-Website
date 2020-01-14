@@ -67,7 +67,7 @@
                         <a class="nav-link" href="#">KONTAKT</a>
                     </li>
                 </ul>
-                <div class="d-block d-md-none">
+                <div class="d-block d-md-none nav-collapse-lines">
                     <div class="hline"></div>
                     <div class="hline"></div>
                     <div class="hline"></div>
@@ -90,26 +90,33 @@
 {% block content %}
     <div class="container">
         <h1>WILLKOMMEN BEIM DA!CHOR !</h1>
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-        dolore
-        magna aliqua. Mauris in aliquam sem fringilla ut morbi. Pulvinar sapien et ligula ullamcorper malesuada
-        proin
-        libero nunc consequat. Felis donec et odio pellentesque diam volutpat. Et tortor at risus viverra
-        adipiscing.
-
-        Est sit amet facilisis magna etiam tempor orci eu. Et odio pellentesque diam volutpat commodo sed egestas
-        egestas. Luctus accumsan tortor posuere ac ut consequat semper viverra nam. Volutpat blandit aliquam etiam
-        erat
-        velit. Tortor id aliquet lectus proin. Arcu risus quis varius quam quisque id diam vel quam. Phasellus
-        egestas
-        tellus rutrum tellus pellentesque. Risus nec feugiat in fermentum. Placerat vestibulum lectus mauris
-        ultrices
-        eros in. Malesuada fames ac turpis egestas sed tempus urna et pharetra. Dolor sit amet consectetur
-        adipiscing
-        elit ut. Rutrum quisque non tellus orci. Ut tristique et egestas quis ipsum suspendisse ultrices gravida.
-        Cum
-        sociis natoque penatibus et magnis dis parturient montes.
+        <div class="row">
+            <div class="col-md-7 text-center my-auto">
+                <p>
+                    bunt — musikalisch — aufgeweckt
+                </p>
+                <p class="text-justify">
+                    Wir sind der DA!CHOR Darmstadt, eine bunte Mischung an Menschen die Spaß am Singen haben. Wir singen
+                    meist a cappella oder mit wenig Begleitung aus einer breiten Vielfalt von Richtungen, proben
+                    einmal pro Woche und freuen uns immer neue Gesichter zu sehen. Bei Interesse erreicht man uns am
+                    Besten per E-Mail!
+                </p>
+                <p>
+                    <img
+                            src="{% static "img/DACHOR_Note-weiss.large.png" %}"
+                            alt="Note"
+                            height="50rem"
+                    />
+                </p>
+            </div>
+            <div class="col-md-5 border-left">
+                <img
+                        src="{% static "img/dachor-2018.jpg" %}"
+                        alt="DA!CHOR 2018"
+                        class="img-fluid"
+                />
+            </div>
+        </div>
     </div>
 {% endblock %}
 
