@@ -12,10 +12,10 @@
         <ul class="navbar-nav ml-auto flex-row">
             <li class="nav-item nav-button">
                 <div class="d-none d-sm-block">
-                    <a class="nav-link" href="{% url "website:login" %}">Einloggen/Registrieren</a>
+                    <a class="nav-link {{ login }}" href="{% url "website:login" %}">Einloggen/Registrieren</a>
                 </div>
                 <div class="d-block d-sm-none">
-                    <a class="nav-link" href="{% url "website:login" %}">Login</a>
+                    <a class="nav-link {{ login }}" href="{% url "website:login" %}">Login</a>
                 </div>
             </li>
         </ul>
@@ -32,16 +32,16 @@
         <div class="navbar-collapse collapse pt-2 pt-md-0" id="navbar2">
             <ul class="navbar-nav navbar-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url "website:homepage" %}">STARTSEITE</a>
+                    <a class="nav-link {{ homepage }}" href="{% url "website:homepage" %}">STARTSEITE</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url "website:about" %}">ÜBER UNS</a>
+                    <a class="nav-link {{ about }}" href="{% url "website:about" %}">ÜBER UNS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url "website:events" %}">AUFTRITTE</a>
+                    <a class="nav-link {{ events }}" href="{% url "website:events" %}">AUFTRITTE</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url "website:contact" %}">KONTAKT</a>
+                    <a class="nav-link {{ contect }}" href="{% url "website:contact" %}">KONTAKT</a>
                 </li>
             </ul>
             <div class="d-block d-md-none nav-collapse-lines">
