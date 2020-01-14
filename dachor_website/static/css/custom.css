@@ -1,0 +1,70 @@
+body {
+    background-color: #0069b4;
+    text-align: justify;
+    font-family: "parisine-plus-std-gris", sans-serif;
+    font-weight: bold;
+    letter-spacing: .01em;
+    font-size: 1rem;
+}
+
+body h1 {
+    font-weight: bold;
+    letter-spacing: .01em;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+footer {
+    font-size: .875rem;
+}
+
+.nav-link {
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.navbar {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+}
+
+.hline {
+    width: 100%;
+    height: .05rem;
+    background: #f9f9f9;
+    margin-top: .35rem;
+    margin-bottom: .35rem;
+}
+
+.navbar-nav.navbar-center {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.nav-button .nav-link {
+    font-size: 1rem;
+    padding: 1rem 1rem !important;
+    border: solid .04rem #f9f9f9;
+    margin: 0;
+}
+
+.footer {
+    padding-top: 5rem;
+}
+
+.footer a {
+    color: #f9f9f9;
+}
+
+.footer span {
+    margin-left: 1em;
+}

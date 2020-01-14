@@ -1,64 +1,135 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class='h-100'>
 
 {# make static files accessible #}
 {% load static %}
 
-
 {# load bootstrap tag library #}
 {% load bootstrap4 %}
 
-{# load Bootstrap CSS and JavaScript #}
-{% bootstrap_css %}
-{% bootstrap_javascript jquery='no' %}
-
 <head>
-
     <meta charset="utf-8">
-    {% comment %}
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Website des DA!CHOR in Darmstadt">
-    <meta name="author" content="N. Geisler">
-    {% endcomment %}
+
+    {# load Bootstrap CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='no' %}
 
     {% block title %}<title>DA!CHOR</title>{% endblock %}
-    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font.css' %}">
 </head>
 
-<body>
+<body class="d-flex flex-column h-100">
 
 <!-- Navigation -->
 {% block navbar %}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">DA!CHOR</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container">
+        <nav class="navbar navbar-expand-md fixed-top-sm justify-content-start navbar-dark">
+            <a href="/" class="navbar-brand">
+                <img
+                        src="{% static "img/DACHOR_Logo-weiss.small.png" %}"
+                        alt="DA!CHOR"
+                        class="img-fluid"
+                />
+            </a>
+            <ul class="navbar-nav ml-auto flex-row">
+                <li class="nav-item nav-button">
+                    <div class="d-none d-sm-block">
+                        <a class="nav-link" href="#">Einloggen/Registrieren</a>
+                    </div>
+                    <div class="d-block d-sm-none">
+                        <a class="nav-link" href="#">Login</a>
+                    </div>
+                </li>
+            </ul>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar2">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
+        </nav>
+        <div class="hline"></div>
+        <div class="hline"></div>
+        <div class="hline"></div>
+        <div class="hline"></div>
+
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="navbar-collapse collapse pt-2 pt-md-0" id="navbar2">
+                <ul class="navbar-nav navbar-center">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Start<span class="sr-only">(current)</span>
-                        </a>
+                        <a class="nav-link" href="#">STARTSEITE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Impressum</a>
+                        <a class="nav-link" href="#">ÜBER UNS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">AUFTRITTE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">KONTAKT</a>
                     </li>
                 </ul>
+                <div class="d-block d-md-none">
+                    <div class="hline"></div>
+                    <div class="hline"></div>
+                    <div class="hline"></div>
+                    <div class="hline"></div>
+
+                </div>
             </div>
+        </nav>
+        <div class="d-none d-md-block">
+            <div class="hline"></div>
+            <div class="hline"></div>
+            <div class="hline"></div>
+            <div class="hline"></div>
         </div>
-    </nav>
+    </div>
+
 {% endblock %}
 
 <!-- Page Content -->
 {% block content %}
     <div class="container">
-        <h1>Willkommen beim DA!CHOR</h1>
+        <h1>WILLKOMMEN BEIM DA!CHOR !</h1>
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore
+        magna aliqua. Mauris in aliquam sem fringilla ut morbi. Pulvinar sapien et ligula ullamcorper malesuada
+        proin
+        libero nunc consequat. Felis donec et odio pellentesque diam volutpat. Et tortor at risus viverra
+        adipiscing.
+
+        Est sit amet facilisis magna etiam tempor orci eu. Et odio pellentesque diam volutpat commodo sed egestas
+        egestas. Luctus accumsan tortor posuere ac ut consequat semper viverra nam. Volutpat blandit aliquam etiam
+        erat
+        velit. Tortor id aliquet lectus proin. Arcu risus quis varius quam quisque id diam vel quam. Phasellus
+        egestas
+        tellus rutrum tellus pellentesque. Risus nec feugiat in fermentum. Placerat vestibulum lectus mauris
+        ultrices
+        eros in. Malesuada fames ac turpis egestas sed tempus urna et pharetra. Dolor sit amet consectetur
+        adipiscing
+        elit ut. Rutrum quisque non tellus orci. Ut tristique et egestas quis ipsum suspendisse ultrices gravida.
+        Cum
+        sociis natoque penatibus et magnis dis parturient montes.
     </div>
 {% endblock %}
 
-</body>
+{% block footer %}
+    <footer class="footer mt-auto">
+        <div class="container">
+            <div class="hline"></div>
+            <div class="hline"></div>
+            <div class="hline"></div>
+            <div class="hline"></div>
 
+            <div class="text-center py-3">
+                <a href="#">Kontakt</a> |
+                <a href="#">Impressum</a> |
+                <a href="#">Datenschutz</a>
+                <span class="text-muted">© 2020 DA!CHOR Darmstadt</span>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
+
+</body>
 </html>
