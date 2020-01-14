@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de" class='h-100'>
+
+{# make static files accessible #}
+{% load static %}
+
+{# load bootstrap tag library #}
+{% load bootstrap4 %}
+
+<head>
+    <meta charset="utf-8">
+
+    {# load Bootstrap CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='no' %}
+
+    {% block title %}<title>DA!CHOR</title>{% endblock %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font.css' %}">
+</head>
+
+<body class="d-flex flex-column h-100">
+
+<!-- Navigation -->
+{% block navbar %}
+    {% include "dachor_website/navbar.html" %}
+{% endblock %}
+
+<!-- Page Content -->
+{% block content %}
+{% endblock %}
+
+<!-- Footer -->
+{% block footer %}
+    {% include "dachor_website/footer.html" %}
+{% endblock %}
+
+</body>
+</html>

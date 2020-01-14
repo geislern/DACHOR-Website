@@ -1,0 +1,62 @@
+{% load static %}
+
+<div class="container">
+    <nav class="navbar navbar-expand-md fixed-top-sm justify-content-start navbar-dark">
+        <a href="/" class="navbar-brand">
+            <img
+                    src="{% static "img/DACHOR_Logo-weiss.small.png" %}"
+                    alt="DA!CHOR"
+                    class="img-fluid"
+            />
+        </a>
+        <ul class="navbar-nav ml-auto flex-row">
+            <li class="nav-item nav-button">
+                <div class="d-none d-sm-block">
+                    <a class="nav-link" href="#">Einloggen/Registrieren</a>
+                </div>
+                <div class="d-block d-sm-none">
+                    <a class="nav-link" href="#">Login</a>
+                </div>
+            </li>
+        </ul>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <div class="hline"></div>
+    <div class="hline"></div>
+    <div class="hline"></div>
+    <div class="hline"></div>
+
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="navbar-collapse collapse pt-2 pt-md-0" id="navbar2">
+            <ul class="navbar-nav navbar-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">STARTSEITE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ÜBER UNS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">AUFTRITTE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">KONTAKT</a>
+                </li>
+            </ul>
+            <div class="d-block d-md-none nav-collapse-lines">
+                <div class="hline"></div>
+                <div class="hline"></div>
+                <div class="hline"></div>
+                <div class="hline"></div>
+
+            </div>
+        </div>
+    </nav>
+    <div class="d-none d-md-block">
+        <div class="hline"></div>
+        <div class="hline"></div>
+        <div class="hline"></div>
+        <div class="hline"></div>
+    </div>
+</div>

@@ -1,92 +1,7 @@
-<!DOCTYPE html>
-<html lang="de" class='h-100'>
+{% extends 'dachor_website/base.html' %}
 
-{# make static files accessible #}
 {% load static %}
 
-{# load bootstrap tag library #}
-{% load bootstrap4 %}
-
-<head>
-    <meta charset="utf-8">
-
-    {# load Bootstrap CSS and JavaScript #}
-    {% bootstrap_css %}
-    {% bootstrap_javascript jquery='no' %}
-
-    {% block title %}<title>DA!CHOR</title>{% endblock %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/font.css' %}">
-</head>
-
-<body class="d-flex flex-column h-100">
-
-<!-- Navigation -->
-{% block navbar %}
-    <div class="container">
-        <nav class="navbar navbar-expand-md fixed-top-sm justify-content-start navbar-dark">
-            <a href="/" class="navbar-brand">
-                <img
-                        src="{% static "img/DACHOR_Logo-weiss.small.png" %}"
-                        alt="DA!CHOR"
-                        class="img-fluid"
-                />
-            </a>
-            <ul class="navbar-nav ml-auto flex-row">
-                <li class="nav-item nav-button">
-                    <div class="d-none d-sm-block">
-                        <a class="nav-link" href="#">Einloggen/Registrieren</a>
-                    </div>
-                    <div class="d-block d-sm-none">
-                        <a class="nav-link" href="#">Login</a>
-                    </div>
-                </li>
-            </ul>
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar2">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
-        <div class="hline"></div>
-        <div class="hline"></div>
-        <div class="hline"></div>
-        <div class="hline"></div>
-
-        <nav class="navbar navbar-expand-md navbar-dark">
-            <div class="navbar-collapse collapse pt-2 pt-md-0" id="navbar2">
-                <ul class="navbar-nav navbar-center">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">STARTSEITE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">ÜBER UNS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">AUFTRITTE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">KONTAKT</a>
-                    </li>
-                </ul>
-                <div class="d-block d-md-none nav-collapse-lines">
-                    <div class="hline"></div>
-                    <div class="hline"></div>
-                    <div class="hline"></div>
-                    <div class="hline"></div>
-
-                </div>
-            </div>
-        </nav>
-        <div class="d-none d-md-block">
-            <div class="hline"></div>
-            <div class="hline"></div>
-            <div class="hline"></div>
-            <div class="hline"></div>
-        </div>
-    </div>
-
-{% endblock %}
-
-<!-- Page Content -->
 {% block content %}
     <div class="container">
         <h1>WILLKOMMEN BEIM DA!CHOR !</h1>
@@ -119,24 +34,3 @@
         </div>
     </div>
 {% endblock %}
-
-{% block footer %}
-    <footer class="footer mt-auto">
-        <div class="container">
-            <div class="hline"></div>
-            <div class="hline"></div>
-            <div class="hline"></div>
-            <div class="hline"></div>
-
-            <div class="text-center py-3">
-                <a href="#">Kontakt</a> |
-                <a href="#">Impressum</a> |
-                <a href="#">Datenschutz</a>
-                <span class="text-muted">© 2020 DA!CHOR Darmstadt</span>
-            </div>
-        </div>
-    </footer>
-{% endblock %}
-
-</body>
-</html>
