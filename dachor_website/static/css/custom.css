@@ -17,6 +17,14 @@ body h1 {
     margin-bottom: 4rem;
 }
 
+body a {
+    color: #f9f9f9;
+}
+
+body a:hover {
+    color: #f9f9f9;
+}
+
 footer {
     font-size: .875rem;
 }
