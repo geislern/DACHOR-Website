@@ -23,4 +23,4 @@ pip install --upgrade -r requirements.txt
 ./manage.py collectstatic --noinput
 ./manage.py compilemessages
 
-touch AKPlanning/wsgi.py
+touch dachor/wsgi.py
