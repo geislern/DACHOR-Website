@@ -38,15 +38,6 @@ class EventsView(TemplateView):
         return context
 
 
-class ImpressView(TemplateView):
-    template_name = 'dachor_website/impress.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['impress'] = 'active'
-        return context
-
-
 class LoginView(TemplateView):
     template_name = 'dachor_website/login.html'
 
