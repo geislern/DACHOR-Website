@@ -8,21 +8,41 @@ body {
     overflow-y: scroll;
 }
 
-body h1 {
+h1, h2, h3, h4, h5 {
     font-weight: bold;
     letter-spacing: .01em;
+}
+
+h1 {
     font-size: 3rem;
     text-align: center;
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
 
-body a {
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+a {
     color: #f9f9f9;
 }
 
-body a:hover {
+a:hover {
     color: #f9f9f9;
+}
+
+.text-large {
+    font-size: 1.5rem;
 }
 
 footer {
@@ -33,7 +53,6 @@ footer {
     padding-left: 2rem;
     padding-right: 2rem;
 }
-
 
 .nav-link {
     margin-left: .5rem;
