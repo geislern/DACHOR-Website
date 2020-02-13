@@ -3,34 +3,32 @@
 {% load static %}
 
 {% block content %}
-    <div class="container">
-        <h1>WILLKOMMEN BEIM DA!CHOR !</h1>
-        <div class="row">
-            <div class="col-md-7 text-center my-auto">
-                <p>
-                    bunt — musikalisch — aufgeweckt
-                </p>
-                <p class="text-justify">
-                    Unser Chor besteht aus einer bunten Mischung jung(geblieben)er Menschen, mit viel Freude am Singen.
-                    Wir treffen uns wöchentlich um aus vielen Richtungen, ohne oder mit wenig Begleitung zu singen, und
-                    freuen uns immer über neue Leute. Nimm doch mit uns <a
-                        href="{% url 'website:contact' %}">Kontakt</a> auf!
-                </p>
-                <p>
-                    <img
-                            src="{% static "img/DACHOR_Note-weiss.large.png" %}"
-                            alt="Note"
-                            height="50rem"
-                    />
-                </p>
-            </div>
-            <div class="col-md-5 border-left">
+    <h1>WILLKOMMEN BEIM DA!CHOR !</h1>
+    <div class="row">
+        <div class="col-md-7 text-center my-auto">
+            <p>
+                bunt — musikalisch — aufgeweckt
+            </p>
+            <p class="text-justify">
+                Unser Chor besteht aus einer bunten Mischung jung(geblieben)er Menschen, mit viel Freude am Singen.
+                Wir treffen uns wöchentlich um aus vielen Richtungen, ohne oder mit wenig Begleitung zu singen, und
+                freuen uns immer über neue Leute. Nimm doch mit uns <a
+                    href="{% url 'website:contact' %}">Kontakt</a> auf!
+            </p>
+            <p>
                 <img
-                        src="{% static "img/dachor-2018.jpg" %}"
-                        alt="DA!CHOR 2018"
-                        class="img-fluid"
+                        src="{% static "img/DACHOR_Note-weiss.large.png" %}"
+                        alt="Note"
+                        height="50rem"
                 />
-            </div>
+            </p>
+        </div>
+        <div class="col-md-5 border-left">
+            <img
+                    src="{% static "img/dachor-2018.jpg" %}"
+                    alt="DA!CHOR 2018"
+                    class="img-fluid"
+            />
         </div>
     </div>
 {% endblock %}
