@@ -21,6 +21,6 @@ pip install --upgrade -r requirements.txt
 
 ./manage.py migrate
 ./manage.py collectstatic --noinput
-./manage.py compilemessages
+# ./manage.py compilemessages
 
 touch dachor/wsgi.py

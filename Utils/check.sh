@@ -14,7 +14,7 @@ fi
 
 # in case of checking production setup
 if [[ "$@" == *"--prod"* ]]; then
-    export DJANGO_SETTINGS_MODULE=AKPlanning.settings_production
+    export DJANGO_SETTINGS_MODULE=dachor.settings_production
     ./manage.py check --deploy
 fi
 

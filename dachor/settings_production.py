@@ -7,7 +7,7 @@ Secrets are stored in and imported from an additional file, not set under versio
 import dachor.settings_secrets as secrets
 
 # noinspection PyUnresolvedReferences
-from AKPlanning.settings import *
+from dachor.settings import *
 
 ### SECURITY ###
 
