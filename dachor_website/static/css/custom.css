@@ -5,6 +5,7 @@
 .vertical {display: flex; flex-direction: column}
 .center {justify-content: center; align-items: center}
 .flex {flex: 1}
+
 html {
   --spacing-xs: 8px;
   --spacing: 24px;
@@ -49,6 +50,8 @@ h3 {
 
 a {
     color: #f9f9f9;
+    text-decoration: underline;
+    text-decoration-style: dotted;
 }
 
 a:hover {
