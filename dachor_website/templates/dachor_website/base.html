@@ -7,6 +7,9 @@
 {# load bootstrap tag library #}
 {% load bootstrap4 %}
 
+{# load static file compression #}
+{% load compress %}
+
 <head>
     <meta charset="utf-8">
 
@@ -15,8 +18,11 @@
     {% bootstrap_javascript jquery='no' %}
 
     {% block title %}<title>DA!CHOR</title>{% endblock %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/font.css' %}">
+
+    {% compress css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/font.css' %}">
+    {% endcompress %}
 
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'apple-touch-icon.png' %}">
