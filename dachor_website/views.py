@@ -1,5 +1,5 @@
 # Create your views here.
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, RedirectView
 
 
 class HomepageView(TemplateView):
@@ -38,13 +38,20 @@ class EventsView(TemplateView):
         return context
 
 
-class LoginView(TemplateView):
-    template_name = 'dachor_website/login.html'
+class LoginView(RedirectView):
+    permanent = False
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['login'] = 'active'
-        return context
+    def get_redirect_url(self, *args, **kwargs):
+        return "https://cloud.dachor-darmstadt.de/index.php/s/mQG9jq4ZsXTtzsm"
+
+
+# class LoginView(TemplateView):
+#    template_name = 'dachor_website/login.html'
+#
+#    def get_context_data(self, **kwargs):
+#        context = super().get_context_data(**kwargs)
+#        context['login'] = 'active'
+#        return context
 
 
 class PrivacyView(TemplateView):
