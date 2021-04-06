@@ -22,7 +22,7 @@ Python Requirements werden im Laufe des Setups in einer virtuellen Umgebung, und
 
 #### System Requirements
 
-Dieses Projekt verwendet ````Python 3.6```` und ````Django 3.0````.
+Dieses Projekt verwendet ````Python 3.9```` und ````Django 3````.
 Um den Instruktionen für Entwicklung und Setup zu folgen wird außerdem ````Virtualenv```` und die entsprechenden Python Dev Tools benötigt.
 
 Um die Anwendung produktiv zu deployen, wird außerdem benötigt:

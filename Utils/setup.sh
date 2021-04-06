@@ -10,7 +10,7 @@ rm -rf venv/
 
 # Setup Python Environment
 # Requires: Virtualenv, appropriate Python installation
-virtualenv venv -p python3.6
+virtualenv venv -p python3.9
 source venv/bin/activate
 pip install --upgrade setuptools pip wheel
 pip install -r requirements.txt
