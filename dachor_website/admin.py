@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from dachor_website.models import NewsItem
+
+
+class NewsItemAdmin(admin.ModelAdmin):
+    list_display = ('title', 'start', 'end')
+
+
+admin.site.register(NewsItem, NewsItemAdmin)

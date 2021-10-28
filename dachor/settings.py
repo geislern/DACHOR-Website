@@ -154,3 +154,5 @@ COMPRESS_FILTERS = {
 }
 HTML_MINIFY = True
 KEEP_COMMENTS_ON_MINIFYING = True
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
