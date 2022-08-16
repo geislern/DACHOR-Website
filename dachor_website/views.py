@@ -42,7 +42,7 @@ class LoginView(RedirectView):
     permanent = False
 
     def get_redirect_url(self, *args, **kwargs):
-        return "https://cloud.dachor-darmstadt.de/index.php/s/mQG9jq4ZsXTtzsm"
+        return "https://cloud.dachor-darmstadt.de/index.php/s/aodERj2ZHs6NaGF"
 
 
 # class LoginView(TemplateView):
