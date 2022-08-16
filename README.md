@@ -20,7 +20,7 @@ gleiche Weise installiert. Dieses Projekt verwendet dafür ````pip````.
 
 #### System Requirements
 
-Dieses Projekt verwendet ````Python 3.9```` und ````Django 3````. Um den Instruktionen für Entwicklung und Setup zu
+Dieses Projekt verwendet ````Python 3.10```` und ````Django 4````. Um den Instruktionen für Entwicklung und Setup zu
 folgen werden außerdem ````Virtualenv```` und die entsprechenden Python-Dev-Tools benötigt.
 
 Um die Anwendung produktiv zu deployen, wird außerdem benötigt:
