@@ -32,7 +32,7 @@ Um die Anwendung produktiv zu deployen, wird außerdem benötigt:
 
 #### Python Requirements
 
-Die Python Requirements inklusive der kompatiblen Versionsnummern, werden in der Datei ````requirements.txt````
+Die Python Requirements inklusive der kompatiblen Versionsnummern werden in der Datei ````requirements.txt````
 verwaltet. Mit ````pip```` werden sie mit dem Befehl ````pip install -r requirements```` installiert.
 
 ### Entwicklungssetup
@@ -43,7 +43,7 @@ verwaltet. Mit ````pip```` werden sie mit dem Befehl ````pip install -r requirem
 
 **Automatisches Setup**
 
-Das automatische setup erfolgt durch das Aufrufen des entsprechenden Bash-Scripts aus dem Projektverzeichnis,
+Das automatische Setup erfolgt durch das Aufrufen des entsprechenden Bash-Scripts aus dem Projektverzeichnis,
 z.B. ````./Utils/setup.sh````.
 
 **Manuelles Setup**
