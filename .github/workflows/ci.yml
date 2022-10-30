@@ -1,0 +1,39 @@
+name: Django CI workflow
+
+on: [ push, pull_request ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Cache dependency
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Setup python environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+
+      - name: Check Python version
+        run: python --version
+
+      - name: Setup
+        run: ./Utils/setup.sh
+
+      - name: Static tests
+        env:
+          PYTHONWARNINGS: all
+        run: |
+          ./Utils/check.py
+          python manage.py makemigrations --dry-run --check
+
+      - name: Run Tests
+        run: python manage.py test --keepdb
