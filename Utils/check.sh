@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Check the AKPlanning setup for potential problems
+# Check the project setup for potential problems
 # execute as Utils/check.sh
 
 # activate virtualenv when necessary

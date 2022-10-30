@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Setup AKPlanning
-# execute as Utils/check.sh
+# Setup DACHOR website
+# execute as Utils/setup.sh
 
 # abort on error, print executed commands
 set -ex
