@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Setup DACHOR website
-# execute as Utils/check.sh
+# execute as Utils/setup.sh
 
 # abort on error, print executed commands
 set -ex
