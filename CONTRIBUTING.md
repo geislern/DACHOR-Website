@@ -35,7 +35,7 @@ Fill out any applicable template to help us resolve issues faster.
 
 #### How Do I Submit A (Good) Bug Report?
 
-Bugs are tracked as GitLab issues.
+Bugs are tracked as Github issues.
 Explain the problem and include additional details to help maintainers reproduce the problem:
 
 * **Use a clear and descriptive title** for the issue to identify the problem.
@@ -105,7 +105,7 @@ accepted.
 
 ### Documentation Styleguide
 
-* Please use [GitLab Flavored Markdown (GFM)](https://docs.gitlab.com/ee/user/markdown.html).
+* Please use [Github Flavored Markdown (GFM)](https://github.github.com/gfm/).
 
 ### Python Styleguide
 
