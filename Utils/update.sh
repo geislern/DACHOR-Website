@@ -22,6 +22,8 @@ pip install --upgrade -r requirements.txt
 ./manage.py migrate
 ./manage.py collectstatic --noinput
 ./manage.py compress --force
-# ./manage.py compilemessages
+if [ "$1" = "--prod" ]; then
+  ./manage.py compilemessages
+fi
 
 touch dachor/wsgi.py

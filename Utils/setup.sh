@@ -20,7 +20,9 @@ python manage.py migrate
 
 # Prepare static files and translations
 python manage.py collectstatic --noinput
-python manage.py compilemessages
+if [ "$1" = "--prod" ]; then
+    python manage.py compilemessages
+fi
 
 # Create superuser
 # Credentials are entered interactively on CLI
