@@ -1,4 +1,4 @@
-# Create your views here.
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import TemplateView, RedirectView
 
 
@@ -36,22 +36,6 @@ class EventsView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['events'] = 'active'
         return context
-
-
-class LoginView(RedirectView):
-    permanent = False
-
-    def get_redirect_url(self, *args, **kwargs):
-        return "https://cloud.dachor-darmstadt.de/index.php/s/aodERj2ZHs6NaGF"
-
-
-# class LoginView(TemplateView):
-#    template_name = 'dachor_website/login.html'
-#
-#    def get_context_data(self, **kwargs):
-#        context = super().get_context_data(**kwargs)
-#        context['login'] = 'active'
-#        return context
 
 
 class PrivacyView(TemplateView):
