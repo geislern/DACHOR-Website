@@ -31,9 +31,7 @@ jobs:
       - name: Static tests
         env:
           PYTHONWARNINGS: all
-        run: |
-          ./Utils/check.sh
-          python manage.py makemigrations --dry-run --check
+        run: ./Utils/check.sh
 
       - name: Run Tests
         run: python manage.py test --keepdb
