@@ -34,4 +34,5 @@ jobs:
         run: ./Utils/check.sh
 
       - name: Run Tests
+        before_script: source venv/bin/activate
         run: python manage.py test --keepdb
