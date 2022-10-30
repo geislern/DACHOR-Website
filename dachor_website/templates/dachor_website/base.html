@@ -13,11 +13,11 @@
 <head>
     <meta charset="utf-8">
 
+    {% block title %}<title>DA!CHOR</title>{% endblock %}
+
     {# load Bootstrap CSS and JavaScript #}
     {% bootstrap_css %}
-    {% bootstrap_javascript jquery='no' %}
-
-    {% block title %}<title>DA!CHOR</title>{% endblock %}
+    {% bootstrap_javascript jquery='slim' %}
 
     {% compress css %}
         <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">

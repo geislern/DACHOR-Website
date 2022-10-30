@@ -93,7 +93,7 @@ footer {
     right: 0;
 }
 
-.nav-button .nav-link {
+.nav-button .nav-link, .btn-outline-custom {
     font-size: 1rem;
     padding: 1rem 1rem !important;
     border: solid .04rem #f9f9f9;

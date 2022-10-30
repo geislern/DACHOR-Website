@@ -134,7 +134,7 @@ BOOTSTRAP4 = {
     },
     # use local js
     'javascript_url': {
-        'url': STATIC_URL + "vendor/bootstrap/js/bootstrap.min.js",
+        'url': STATIC_URL + "vendor/bootstrap/js/bootstrap.bundle.min.js",
     },
     # use local theme
     'theme_url': STATIC_URL + 'vendor/bootswatch-superhero/bootstrap.min.css',
@@ -154,3 +154,6 @@ COMPRESS_FILTERS = {
 }
 HTML_MINIFY = True
 KEEP_COMMENTS_ON_MINIFYING = True
+
+LOGIN_URL = "/accounts/login/"
+LOGIN_REDIRECT_URL = "/"

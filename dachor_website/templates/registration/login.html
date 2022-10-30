@@ -1,0 +1,15 @@
+{% extends 'dachor_website/base.html' %}
+
+{% load bootstrap4 %}
+
+{% block content %}
+    <h1>Login</h1>
+
+        <form method="post" class="post-form">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <input type="submit" class="btn btn-outline-custom float-right" value="Login!">
+        </form>
+
+        <a href="{% url "website:password_reset" %}" class="text-white">Passwort vergessen?</a>
+{% endblock %}
