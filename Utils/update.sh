@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Update AKPlanning
+# Update project
 # execute as Utils/check.sh
 
 # abort on error, print executed commands
