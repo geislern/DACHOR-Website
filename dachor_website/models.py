@@ -32,7 +32,7 @@ class Profile(models.Model):
         BASS = ('B', "Bass")
 
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
-    birthday = models.DateField(verbose_name="Geburtstag", blank=True, validators=[validate_birthday])
+    birthday = models.DateField(verbose_name="Geburtstag", blank=True, null=True, validators=[validate_birthday])
     voice = models.CharField(name="Stimme", max_length=1, blank=False, choices=Voices.choices)
 
     def __str__(self):
@@ -41,7 +41,7 @@ class Profile(models.Model):
         :return: the string representation of this object
         :rtype: str
         """
-        return f"{self.user.first_name} {self.user.last_name} ({self.user.email}"
+        return f"{self.user.first_name} {self.user.last_name} ({self.user.email})"
 
 
 @receiver(post_save, sender=User)
@@ -72,5 +72,8 @@ def save_user_profile(sender, instance, **kwargs):
     :param kwargs: The keyword arguments
     :type kwargs: Any
     """
-    profile = Profile.objects.get(user=instance)
-    profile.save()
+    try:
+        profile = Profile.objects.get(user=instance)
+        profile.save()
+    except Profile.DoesNotExist:
+        pass
