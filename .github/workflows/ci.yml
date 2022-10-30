@@ -32,7 +32,7 @@ jobs:
         env:
           PYTHONWARNINGS: all
         run: |
-          ./Utils/check.py
+          ./Utils/check.sh
           python manage.py makemigrations --dry-run --check
 
       - name: Run Tests
