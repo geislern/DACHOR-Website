@@ -10,14 +10,26 @@
             />
         </a>
         <ul class="navbar-nav ml-auto flex-row">
-            <li class="nav-item nav-button">
-                <div class="d-none d-sm-block">
-                    <a class="nav-link {{ login }}" href="{% url "website:login" %}">Anmelden</a>
+            {% if user.is_authenticated %}
+                <div class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      {{ user }}
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="{% url "website:password_change" %}">Passwort ändern</a>
+                    <a class="dropdown-item" href="{% url "website:logout" %}">Logout</a>
+                  </div>
                 </div>
-                <div class="d-block d-sm-none">
-                    <a class="nav-link {{ login }}" href="{% url "website:login" %}">Login</a>
-                </div>
-            </li>
+            {% else %}
+                <li class="nav-item nav-button">
+                    <div class="d-none d-sm-block">
+                        <a class="nav-link {{ login }}" href="{% url "website:login" %}">Anmelden</a>
+                    </div>
+                    <div class="d-block d-sm-none">
+                        <a class="nav-link {{ login }}" href="{% url "website:login" %}">Login</a>
+                    </div>
+                </li>
+            {% endif %}
         </ul>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar2">
             <span class="navbar-toggler-icon"></span>
