@@ -13,15 +13,16 @@
 <head>
     <meta charset="utf-8">
 
-    {# load Bootstrap CSS and JavaScript #}
-    {% bootstrap_css %}
-    {% bootstrap_javascript jquery='no' %}
-
     {% block title %}<title>DA!CHOR</title>{% endblock %}
 
     {% compress css %}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/font.css' %}">
+        <link rel="stylesheet" type="text/x-scss" href="{% static 'vendor/bootswatch-superhero/theme.scss' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+    {% endcompress %}
+
+    {% compress js %}
+        {% bootstrap_javascript jquery='slim' %}
     {% endcompress %}
 
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
