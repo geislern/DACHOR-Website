@@ -16,17 +16,17 @@
                       {{ user }}
                   </a>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="{% url "website:password_change" %}">Passwort ändern</a>
-                    <a class="dropdown-item" href="{% url "website:logout" %}">Logout</a>
+                    <a class="dropdown-item" href="{% url "password_change" %}">Passwort ändern</a>
+                    <a class="dropdown-item" href="{% url "logout" %}?next=/">Logout</a>
                   </div>
                 </div>
             {% else %}
                 <li class="nav-item nav-button">
                     <div class="d-none d-sm-block">
-                        <a class="nav-link {{ login }}" href="{% url "website:login" %}">Anmelden</a>
+                        <a class="nav-link {{ login }}" href="{% url "login" %}">Anmelden</a>
                     </div>
                     <div class="d-block d-sm-none">
-                        <a class="nav-link {{ login }}" href="{% url "website:login" %}">Login</a>
+                        <a class="nav-link {{ login }}" href="{% url "login" %}">Login</a>
                     </div>
                 </li>
             {% endif %}

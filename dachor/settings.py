@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'compressor',
     'dachor_website',
+    'dachor_internal',
 ]
 
 MIDDLEWARE = [
