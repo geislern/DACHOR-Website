@@ -128,21 +128,22 @@ STATICFILES_FINDERS = (
 )
 
 BOOTSTRAP4 = {
-    # Use local CSS
-    "css_url": {
-        "href": STATIC_URL + "vendor/bootstrap/css/bootstrap.min.css",
-    },
     # use local js
     'javascript_url': {
         'url': STATIC_URL + "vendor/bootstrap/js/bootstrap.bundle.min.js",
     },
-    # use local theme
-    'theme_url': STATIC_URL + 'vendor/bootswatch-superhero/bootstrap.min.css',
+    'jquery_slim_url': {
+        'url': STATIC_URL + "vendor/jquery/jquery-3.5.1.slim.js"
+    }
+    # css and theme will be loaded directly in base.html due to compiling + compression
 }
 
 # Compressor and minifier config
 COMPRESS_ENABLED = True
 COMPRESS_CSS_HASHING_METHOD = 'content'
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
 COMPRESS_FILTERS = {
     'css': [
         'compressor.filters.css_default.CssAbsoluteFilter',
