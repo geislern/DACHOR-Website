@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import TemplateView
 
-# Create your views here.
+from dachor_website.views import NavbarHighlightMixin
+
+
+class StartView(NavbarHighlightMixin, LoginRequiredMixin, TemplateView):
+    template_name = 'dachor_internal/index.html'
+    navbar_active = 'internal'
+

@@ -158,4 +158,4 @@ HTML_MINIFY = True
 KEEP_COMMENTS_ON_MINIFYING = True
 
 LOGIN_URL = "/accounts/login/"
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "/intern/"

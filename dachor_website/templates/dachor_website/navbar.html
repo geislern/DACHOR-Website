@@ -11,7 +11,7 @@
         </a>
         <ul class="navbar-nav ml-auto flex-row">
             {% if user.is_authenticated %}
-                <div class="nav-item dropdown">
+                <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       {{ user }}
                   </a>
@@ -19,7 +19,7 @@
                     <a class="dropdown-item" href="{% url "password_change" %}">Passwort ändern</a>
                     <a class="dropdown-item" href="{% url "logout" %}?next=/">Logout</a>
                   </div>
-                </div>
+                </li>
             {% else %}
                 <li class="nav-item nav-button">
                     <div class="d-none d-sm-block">
@@ -55,6 +55,14 @@
                 <li class="nav-item">
                     <a class="nav-link {{ contact }}" href="{% url "website:contact" %}">KONTAKT</a>
                 </li>
+                {% if user.is_authenticated %}
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {{ internal }}" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">INTERN</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="{% url "internal:start" %}">Übersicht</a>
+                    </div>
+                  </li>
+                {% endif %}
             </ul>
             <div class="d-block d-md-none nav-collapse-lines">
                 <div class="hline"></div>
