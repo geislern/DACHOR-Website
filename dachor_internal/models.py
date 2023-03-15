@@ -1,10 +1,13 @@
 import datetime
 
+from django.conf import settings
 from django.core.exceptions import ValidationError
+from django.core.mail import EmailMessage
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.urls import reverse_lazy
 
 
 def validate_birthday(value):
@@ -77,3 +80,21 @@ def save_user_profile(sender, instance, **kwargs):
         profile.save()
     except Profile.DoesNotExist:
         pass
+
+
+@receiver(post_save, sender=User)
+def user_saved_handler(sender, instance: User, created, **kwargs):
+    """
+    React to user creation by sending a notification mail to the instance admins
+    """
+    if created and settings.SEND_MAILS:
+        host = 'https://' + settings.ALLOWED_HOSTS[0] if len(settings.ALLOWED_HOSTS) > 0 else 'http://127.0.0.1:8000'
+        url = f"{host}{reverse_lazy('admin:auth_user_change', kwargs={'object_id': instance.pk})}"
+
+        mail = EmailMessage(
+            f"[DA!CHOR Webseite] Neuer Benutzer '{instance.username}' angelegt",
+            f"Ein neuer Nutzer {instance.first_name} {instance.last_name} ({instance.username}) hat sich registriert.\n\nFreigeben: {url}",
+            settings.DEFAULT_FROM_EMAIL,
+            settings.ADMIN_MAILS
+        )
+        mail.send(fail_silently=True)
