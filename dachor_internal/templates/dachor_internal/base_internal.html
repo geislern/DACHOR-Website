@@ -3,7 +3,9 @@
 {% load bootstrap4 %}
 
 {% block content %}
-    {% bootstrap_messages %}
+    <div class="mt-2">
+        {% bootstrap_messages %}
+    </div>
 
     {% block content_internal %}
     {% endblock %}
