@@ -1,0 +1,13 @@
+{% extends 'dachor_internal/base_internal.html' %}
+
+{% load bootstrap4 %}
+
+{% block content_internal %}
+    <h1>Profil bearbeiten</h1>
+
+    <form method="post" class="post-form">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <input type="submit" class="btn btn-outline-custom float-right" value="Aktualisieren">
+        </form>
+{% endblock %}

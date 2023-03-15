@@ -36,3 +36,21 @@ DATABASES = {
 }
 
 # TODO: caching
+
+### EMAILS ###
+SEND_MAILS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+# Addresses of all admins of this instance that will receive mail notifications
+ADMIN_MAILS = secrets.MAIL_ADMINS
+
+# Address to send from
+SERVER_EMAIL = secrets.MAIL_ADDRESS
+DEFAULT_FROM_EMAIL = SERVER_EMAIL
+
+# SMTP Server Details
+EMAIL_HOST = secrets.MAIL_HOST
+EMAIL_PORT = secrets.MAIL_PORT
+EMAIL_USE_TLS = secrets.MAIL_USE_TLS
+EMAIL_HOST_USER = secrets.MAIL_USER
+EMAIL_HOST_PASSWORD = secrets.MAIL_PASSWORD

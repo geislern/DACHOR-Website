@@ -1,47 +1,33 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import TemplateView, RedirectView
+from django.views.generic import TemplateView
 
 
-class HomepageView(TemplateView):
+class NavbarHighlightMixin:
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context[self.navbar_active] = 'active'
+        return context
+
+
+class HomepageView(NavbarHighlightMixin, TemplateView):
     template_name = 'dachor_website/homepage.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['homepage'] = 'active'
-        return context
+    navbar_active = 'homepage'
 
 
-class AboutView(TemplateView):
+class AboutView(NavbarHighlightMixin, TemplateView):
     template_name = 'dachor_website/about.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['about'] = 'active'
-        return context
+    navbar_active = 'about'
 
 
-class ContactView(TemplateView):
+class ContactView(NavbarHighlightMixin, TemplateView):
     template_name = 'dachor_website/contact.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['contact'] = 'active'
-        return context
+    navbar_active = 'contact'
 
 
-class EventsView(TemplateView):
+class EventsView(NavbarHighlightMixin, TemplateView):
     template_name = 'dachor_website/events.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['events'] = 'active'
-        return context
+    navbar_active = 'events'
 
 
-class PrivacyView(TemplateView):
+class PrivacyView(NavbarHighlightMixin, TemplateView):
     template_name = 'dachor_website/privacy.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['privacy'] = 'active'
-        return context
+    navbar_active = 'privacy'

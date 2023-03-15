@@ -158,4 +158,10 @@ HTML_MINIFY = True
 KEEP_COMMENTS_ON_MINIFYING = True
 
 LOGIN_URL = "/accounts/login/"
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "/intern/"
+
+# Emails
+SEND_MAILS = True
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+ADMIN_MAILS = ['test@example.com']
+DEFAULT_FROM_EMAIL = 'test@example.com'

@@ -1,0 +1,12 @@
+{% extends 'dachor_website/base.html' %}
+
+{% load bootstrap4 %}
+
+{% block content %}
+    <div class="mt-2">
+        {% bootstrap_messages %}
+    </div>
+
+    {% block content_internal %}
+    {% endblock %}
+{% endblock %}

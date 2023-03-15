@@ -5,11 +5,17 @@
 {% block content %}
     <h1>Login</h1>
 
-        <form method="post" class="post-form">
-            {% csrf_token %}
-            {% bootstrap_form form %}
-            <input type="submit" class="btn btn-outline-custom float-right" value="Login!">
-        </form>
+    <div class="alert alert-dismissible alert-light">
+        Wenn du deinen Account erst kürzlich erstellt hast, kannst du dich vielleicht noch nicht einloggen,
+        weil alle Accounts erst überprüft und freigeschaltet werden müssen.
+    </div>
 
-        <a href="{% url "password_reset" %}" class="text-white">Passwort vergessen?</a>
+    <form method="post" class="post-form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <input type="submit" class="btn btn-outline-custom float-right" value="Login!">
+    </form>
+
+    <a href="{% url "password_reset" %}" class="text-white">Passwort vergessen?</a> &middot;
+    <a href="{% url "internal:signup" %}" class="text-white">Neu hier?</a>
 {% endblock %}
