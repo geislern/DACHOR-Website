@@ -1,5 +1,5 @@
 Django==4.2.2
-django-bootstrap4==23.1
+django-bootstrap4==23.2
 django-compressor==4.3.1
 django-htmlmin==0.11.0
 django-libsass==0.9
