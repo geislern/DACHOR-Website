@@ -1,4 +1,4 @@
-Django==4.2.3
+Django==4.2.4
 django-bootstrap4==23.2
 django-compressor==4.4
 django-htmlmin==0.11.0
