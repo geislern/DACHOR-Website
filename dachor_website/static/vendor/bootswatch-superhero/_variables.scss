@@ -17,7 +17,7 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
-$blue:    #df691a !default;
+$blue:    #00528c !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -41,7 +41,7 @@ $yiq-contrasted-threshold:  185 !default;
 
 // Body
 
-$body-bg:                   #00528c !default;
+$body-bg:                   $blue !default;
 $body-color:                $white !default;
 
 // Components
@@ -77,11 +77,12 @@ $custom-file-border-color:          $gray-200 !default;
 
 // Dropdowns
 
-$dropdown-bg:                       $gray-200 !default;
-$dropdown-divider-bg:               rgba($black, .15) !default;
+$dropdown-bg:                       $blue !default;
+$dropdown-divider-bg:               $gray-100 !default;
 $dropdown-link-color:               $body-color !default;
-$dropdown-link-hover-color:         $dropdown-link-color !default;
-$dropdown-link-hover-bg:            $table-hover-bg !default;
+$dropdown-link-hover-color:         $blue !default;
+$dropdown-link-hover-bg:            $white !default;
+$dropdown-border-color:             $white !default;
 
 // Navs
 
