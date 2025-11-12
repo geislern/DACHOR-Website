@@ -1,4 +1,4 @@
-from django.test import TestCase, Client
+from django.test import Client, TestCase
 from django.urls import reverse
 
 
@@ -19,5 +19,5 @@ class WebsiteTests(TestCase):
 
         for v in self.VIEWS:
             response = client.get(reverse('website:'+v))
-            self.assertEquals(response.status_code, 200,
+            self.assertEqual(response.status_code, 200,
                               f"Loading view '{v}' produced error {response.status_code}")
