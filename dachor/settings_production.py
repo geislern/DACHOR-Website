@@ -45,7 +45,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 ADMIN_MAILS = secrets.MAIL_ADMINS
 
 # Address to send from
-SERVER_EMAIL = secrets.MAIL_ADDRESS
+SERVER_EMAIL = secrets.MAIL_SERVER_ADDRESS
 DEFAULT_FROM_EMAIL = SERVER_EMAIL
 
 # SMTP Server Details
