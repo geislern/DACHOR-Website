@@ -5,11 +5,3 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: django
-    versions:
-    - 3.0.7
-    - 3.1.6
-  - dependency-name: django-bootstrap4
-    versions:
-    - 2.3.1

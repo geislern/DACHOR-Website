@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bootstrap4',
+    'django_bootstrap5',
     'compressor',
     'dachor_website',
     'dachor_internal',
@@ -128,14 +128,11 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
-BOOTSTRAP4 = {
+BOOTSTRAP5 = {
     # use local js
     'javascript_url': {
         'url': STATIC_URL + "vendor/bootstrap/js/bootstrap.bundle.min.js",
     },
-    'jquery_slim_url': {
-        'url': STATIC_URL + "vendor/jquery/jquery-3.5.1.slim.js"
-    }
     # css and theme will be loaded directly in base.html due to compiling + compression
 }
 

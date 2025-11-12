@@ -5,7 +5,7 @@
 {% load static %}
 
 {# load bootstrap tag library #}
-{% load bootstrap4 %}
+{% load django_bootstrap5 %}
 
 {# load static file compression #}
 {% load compress %}
@@ -22,7 +22,8 @@
     {% endcompress %}
 
     {% compress js %}
-        {% bootstrap_javascript jquery='slim' %}
+        {% bootstrap_javascript %}
+        <script src="{% static 'vendor/jquery/jquery-3.7.1.slim.min.js' %}"></script>
     {% endcompress %}
 
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>

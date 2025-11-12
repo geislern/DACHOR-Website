@@ -1,14 +1,10 @@
-// Superhero 4.6.2
+// Superhero 5.3.8
 // Bootswatch
 
 
-// Navbar ======================================================================
+// remove web-font-path for DACHOR site
 
-.navbar {
-  font-size: $font-size-sm;
-}
-
-// Buttons =====================================================================
+// Buttons
 
 .btn {
   @each $color, $value in $theme-colors {
@@ -22,7 +18,11 @@
   }
 }
 
-// Typography ==================================================================
+// Typography
+
+.text-secondary {
+  color: var(--bs-secondary-color) !important;
+}
 
 .dropdown-menu {
   font-size: $font-size-sm;
@@ -36,7 +36,7 @@
   color: $body-color;
 }
 
-// Tables ======================================================================
+// Tables
 
 .table {
   font-size: $font-size-sm;
@@ -57,158 +57,9 @@
   .text-muted {
     color: $text-muted;
   }
-
-  &-primary {
-    &,
-    > th,
-    > td {
-      background-color: $primary;
-    }
-  }
-
-  &-secondary {
-    &,
-    > th,
-    > td {
-      background-color: $secondary;
-    }
-  }
-
-  &-light {
-    &,
-    > th,
-    > td {
-      background-color: $light;
-    }
-  }
-
-  &-dark {
-    color: $white;
-
-    &,
-    > th,
-    > td {
-      background-color: $dark;
-    }
-  }
-
-  &-success {
-    &,
-    > th,
-    > td {
-      background-color: $success;
-    }
-  }
-
-  &-info {
-    &,
-    > th,
-    > td {
-      background-color: $info;
-    }
-  }
-
-  &-danger {
-    &,
-    > th,
-    > td {
-      background-color: $danger;
-    }
-  }
-
-  &-warning {
-    &,
-    > th,
-    > td {
-      background-color: $warning;
-    }
-  }
-
-  &-active {
-    &,
-    > th,
-    > td {
-      background-color: $table-active-bg;
-    }
-  }
-
-  &-hover {
-    .table-primary:hover {
-      &,
-      > th,
-      > td {
-        background-color: darken($primary, 5%);
-      }
-    }
-
-    .table-secondary:hover {
-      &,
-      > th,
-      > td {
-        background-color: darken($secondary, 5%);
-      }
-    }
-
-    .table-light:hover {
-      &,
-      > th,
-      > td {
-        background-color: darken($light, 5%);
-      }
-    }
-
-    .table-dark:hover {
-      &,
-      > th,
-      > td {
-        background-color: darken($dark, 5%);
-      }
-    }
-
-    .table-success:hover {
-      &,
-      > th,
-      > td {
-        background-color: darken($success, 5%);
-      }
-    }
-
-    .table-info:hover {
-      &,
-      > th,
-      > td {
-        background-color: darken($info, 5%);
-      }
-    }
-
-    .table-danger:hover {
-      &,
-      > th,
-      > td {
-        background-color: darken($danger, 5%);
-      }
-    }
-
-    .table-warning:hover {
-      &,
-      > th,
-      > td {
-        background-color: darken($warning, 5%);
-      }
-    }
-
-    .table-active:hover {
-      &,
-      > th,
-      > td {
-        background-color: $table-active-bg;
-      }
-    }
-
-  }
 }
 
-// Forms =======================================================================
+// Forms
 
 label,
 .radio label,
@@ -217,7 +68,15 @@ label,
   font-size: $font-size-sm;
 }
 
-// Navs ========================================================================
+.form-floating {
+  > label,
+  > .form-control:focus ~ label,
+  > .form-control:not(:placeholder-shown) ~ label {
+    color: $input-placeholder-color;
+  }
+}
+
+// Navs
 
 .nav-tabs,
 .nav-pills {
@@ -237,11 +96,11 @@ label,
   text-decoration: none;
 }
 
-// Indicators ==================================================================
+// Indicators
 
 .alert {
-  border: none;
   color: $white;
+  border: none;
 
   a,
   .alert-link {
@@ -267,25 +126,19 @@ label,
   }
 }
 
-.close {
-  color: $white;
-  text-shadow: none;
-  opacity: .5;
-
-  &:hover,
-  &:focus {
-    opacity: 1;
-  }
+.tooltip {
+  --bs-tooltip-bg: var(--bs-tertiary-bg);
+  --bs-tooltip-color: var(--bs-emphasis-color);
 }
 
-// Popovers      ===============================================================
+// Popovers
 
 .popover-header {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-// Containers ==================================================================
+// Containers
 
 .modal {
   &-header,

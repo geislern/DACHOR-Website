@@ -9,24 +9,26 @@
                     class="img-fluid"
             />
         </a>
-        <ul class="navbar-nav ml-auto flex-row">
+        <ul class="navbar-nav ms-auto flex-row">
             {% if user.is_authenticated %}
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      {{ user }}
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="{% url "password_change" %}">Passwort ändern</a>
-                    <a class="dropdown-item" href="{% url "logout" %}?next=/">Logout</a>
-                  </div>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ user }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="{% url "password_change" %}">Passwort ändern</a>
+                        <a class="dropdown-item" href="{% url "logout" %}?next=/">Logout</a>
+                    </div>
                 </li>
             {% else %}
                 <li class="nav-item nav-button">
                     <div class="d-none d-sm-block">
-                        <a class="nav-link {{ login }}" href="{% url "login" %}">Anmelden</a>
+                        <a class="nav-link {{ login }}" href="https://cloud.dachor-darmstadt.de/s/2bFyH2o6zjWcgpH">Anmelden</a>{# {% url "login" %} #}
                     </div>
                     <div class="d-block d-sm-none">
-                        <a class="nav-link {{ login }}" href="{% url "login" %}">Login</a>
+                        <a class="nav-link {{ login }}"
+                           href="https://cloud.dachor-darmstadt.de/s/2bFyH2o6zjWcgpH">Login</a>{# {% url "login" %} #}
                     </div>
                 </li>
             {% endif %}
@@ -56,13 +58,14 @@
                     <a class="nav-link {{ contact }}" href="{% url "website:contact" %}">KONTAKT</a>
                 </li>
                 {% if user.is_authenticated %}
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {{ internal }}" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">INTERN</a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="{% url "internal:start" %}">Übersicht</a>
-                      <a class="dropdown-item" href="{% url "internal:profile-edit" %}">Profil bearbeiten</a>
-                    </div>
-                  </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle {{ internal }}" data-toggle="dropdown" href="#" role="button"
+                           aria-haspopup="true" aria-expanded="true">INTERN</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url "internal:start" %}">Übersicht</a>
+                            <a class="dropdown-item" href="{% url "internal:profile-edit" %}">Profil bearbeiten</a>
+                        </div>
+                    </li>
                 {% endif %}
             </ul>
             <div class="d-block d-md-none nav-collapse-lines">
