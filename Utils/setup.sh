@@ -14,6 +14,9 @@ python3.13 -m venv venv
 source venv/bin/activate
 pip install --upgrade setuptools pip wheel
 pip install -r requirements.txt
+if [ "$1" = "--prod" ]; then
+    pip install mysqlclient
+fi
 
 # Setup database
 python manage.py migrate
