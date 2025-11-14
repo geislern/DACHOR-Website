@@ -1,6 +1,6 @@
 Django==5.2.8
 django-betterforms==2.0.0
-django-bootstrap5==25.2
+django-bootstrap5==25.3
 django-compressor==4.6.0
 django-htmlmin==0.11.0
 django-libsass==0.9
