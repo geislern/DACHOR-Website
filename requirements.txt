@@ -1,4 +1,4 @@
-Django==6.0.1
+Django==6.0.2
 django-betterforms==2.0.0
 django-bootstrap5==26.1
 django-compressor==4.6.0
